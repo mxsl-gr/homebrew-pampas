@@ -11,7 +11,7 @@ class Pampas < Formula
     Pathname.glob("#{libexec}/bin/*") do |file|
       next if file.directory?
       basename = file.basename
-      (bin/basename).write_env_script file
+      (bin/basename).write file
     end
   end
 
