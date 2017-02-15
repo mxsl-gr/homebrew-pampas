@@ -3,7 +3,7 @@ class Pampas < Formula
   homepage "https://www.terminus.io/"
   url "http://terminus-paas.oss.aliyuncs.com/pampas.tar.gz"
   version "0.0.2"
-  sha256 "909c8e39fbfd92f5912433e07b659183ccc6a6cc5230268975567428f29702d7"
+  sha256 "d41c13358cf6c56aff3ab8dddbfd2f8e551db9c061243a1333977b7bc1444b6f"
 
   def install
     system "ls"
