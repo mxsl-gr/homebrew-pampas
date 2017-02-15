@@ -7,7 +7,6 @@ class Pampas < Formula
 
   def install
     bin.install Dir["bin/*"]
-    template.install Dir["template/*"]
   end
 
   def post_install
