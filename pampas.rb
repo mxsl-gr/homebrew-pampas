@@ -7,6 +7,10 @@ class Pampas < Formula
 
   def install
     libexec.install Dir["*"]
+    Pathname.glob("#{libexec}/bin/*") do |file|
+      next if file.directory?
+      basename = file.basename
+    end
   end
 
   def post_install
