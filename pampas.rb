@@ -6,7 +6,7 @@ class Pampas < Formula
   sha256 "29ad47bc1ad490e6495b62e8155973befc0b00e9ab6eb05aa985dc55c12ddff2"
 
   def install
-    system "make install"
+    libexec.install Dir["*"]
   end
 
   def post_install
