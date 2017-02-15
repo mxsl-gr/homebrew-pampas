@@ -6,13 +6,8 @@ class Pampas < Formula
   sha256 "8824d0babf1a77c66d05921535c3323fcbe31350dd7b096e92e6947be78fe5f6"
 
   def install
-    libexec.install Dir["*"]
-
-    Pathname.glob("#{libexec}/bin/*") do |file|
-      next if file.directory?
-      basename = file.basename
-      (bin/basename).write file
-    end
+    bin.install Dir["bin/*"]
+    template.install Dir["template/*"]
   end
 
   def post_install
