@@ -1,22 +1,17 @@
 class Pampas < Formula
   desc "A "
   homepage "https://www.terminus.io/"
-  url "http://terminus-paas.oss.aliyuncs.com/pampas.tar.gz"
-  version "0.0.3"
-  sha256 "8824d0babf1a77c66d05921535c3323fcbe31350dd7b096e92e6947be78fe5f6"
+  url "http://terminus-paas.oss.aliyuncs.com/dist/pampas/pampas.0.0.1-dev.tar.gz"
+  version "0.0.1-dev"
+  sha256 "516a541581be42a45530a9cf025c15cd0307c3563c8136c6c3d9609e414252c1"
 
   depends_on "maven"
   depends_on "git"
-  depends_on "nvm"
   depends_on "docker"
-
+  depends_on "node"
 
   def install
     bin.install Dir["bin/*"]
-  end
-
-  def post_install
-    # (HOMEBREW_PREFIX/"bin").install_symlink bin/"python2.6"
   end
 
   test do
