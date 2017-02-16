@@ -5,6 +5,12 @@ class Pampas < Formula
   version "0.0.3"
   sha256 "8824d0babf1a77c66d05921535c3323fcbe31350dd7b096e92e6947be78fe5f6"
 
+  depends_on "maven"
+  depends_on "git"
+  depends_on "nvm"
+  depends_on "docker"
+
+
   def install
     bin.install Dir["bin/*"]
   end
