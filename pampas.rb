@@ -7,8 +7,8 @@ class Pampas < Formula
 
   depends_on "maven"
   depends_on "git"
-  depends_on "docker"
   depends_on "node"
+  depends_on "docker" => :recommended
 
   def install
     bin.install Dir["bin/*"]
