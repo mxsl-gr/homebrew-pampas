@@ -18,10 +18,9 @@ class Pampas < Formula
   end
 
   def caveats
-    install_script = HOMEBREW_PREFIX/"scripts/install-mac.sh"
     <<-EOS.undent
       run shell script (need root):
-        #{install_script}
+        #{prefix}/scripts/install-mac.sh
     EOS
   end
 
