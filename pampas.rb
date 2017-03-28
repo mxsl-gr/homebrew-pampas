@@ -22,6 +22,10 @@ class Pampas < Formula
     <<-EOS.undent
       run shell script (need root):
         sudo /bin/sh #{prefix}/install-mac.sh
+
+      export env:
+        export BUILDPACK_PATH=#{lib}/buildpacks/
+        export PAMPAS_TEMPLATES=#{lib}/pampas-templates/
     EOS
   end
 
