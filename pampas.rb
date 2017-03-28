@@ -13,7 +13,7 @@ class Pampas < Formula
   def install
     bin.install Dir["bin/*"]
     lib.install Dir["lib/*"]
-    prefix.install "lib/scripts/install-mac.sh"
+    prefix.install "install-mac.sh"
     ENV["PAMPAS_TEMPLATES"] = HOMEBREW_PREFIX/"pampas-templates/"
     ENV["BUILDPACK_PATH"] = HOMEBREW_PREFIX/"buildpacks/"
   end
@@ -21,7 +21,7 @@ class Pampas < Formula
   def caveats
     <<-EOS.undent
       run shell script (need root):
-        #{prefix}/scripts/install-mac.sh
+        sudo /bin/sh #{prefix}/install-mac.sh
     EOS
   end
 
