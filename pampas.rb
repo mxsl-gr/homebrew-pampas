@@ -13,6 +13,7 @@ class Pampas < Formula
   def install
     bin.install Dir["bin/*"]
     lib.install Dir["lib/*"]
+    prefix.install "lib/scripts/install-mac.sh"
     ENV["PAMPAS_TEMPLATES"] = HOMEBREW_PREFIX/"pampas-templates/"
     ENV["BUILDPACK_PATH"] = HOMEBREW_PREFIX/"buildpacks/"
   end
